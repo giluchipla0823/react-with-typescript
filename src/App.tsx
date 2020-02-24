@@ -1,8 +1,11 @@
 import React from 'react';
-import logo from './logo.svg';
+import Logo from './components/Logo';
+import LinkRef from './components/LinkRef';
 import './App.css';
 
+
 interface Props {}
+
 
 interface State {
   count: number;
@@ -19,18 +22,17 @@ class App extends React.Component<Props, State> {
     return (
       <div className="App">
         <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
+          <Logo />
           <p>
             { welcome }
           </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
+          
+
+          <LinkRef 
+            link="https://reactjs.org">
+              Learn React !!
+          </LinkRef>
+
         </header>
       </div>
     );
